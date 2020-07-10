@@ -3,9 +3,15 @@ install_packages:
   - 'cron'
 start_services:
   - 'cron'
+install_files:
+  - owner:              'root'
+    group:              'root'
+    mode:               '0644'
+    src:                'files/bin/reboot'
+    dest:               '/usr/local/bin/reboot'
 template_files:
   - owner:              'root'
     group:              'root'
     mode:               '0644'
-    src:                "templates/cron.d/reboot"
+    src:                'templates/cron.d/reboot'
     dest:               '/etc/cron.d/reboot'
