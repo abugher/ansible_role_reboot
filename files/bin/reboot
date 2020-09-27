@@ -1,5 +1,6 @@
 #!/bin/bash
 
 if grep -q '^5$' < /var/log/update_debian.ret; then
-  /sbin/shutdown -r +31 "Automatic reboot for updates."
+  /sbin/shutdown -r +31 "Automatic reboot for updates." > /var/log/reboot.log 2>&1
+  echo $? > /var/log/reboot.ret
 fi
