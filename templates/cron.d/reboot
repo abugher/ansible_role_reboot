@@ -1,2 +1,0 @@
-# m     h       dom     mon     dow     user    command
-{% if skip_reboot is defined %}#{% endif %}{{ reboot_minute }}      {{ reboot_hour }}      *       *       *       root    /usr/local/bin/reboot 
